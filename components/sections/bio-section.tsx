@@ -12,17 +12,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function BioSection() {
   return (
     <div className="flex flex-col gap-4 items-center justify-center py-10">
-      <Item variant="muted">
-        <ItemMedia variant="icon">
+      <Item>
+        <ItemMedia>
           <Avatar className="size-22">
-            <AvatarImage src="https://media.licdn.com/dms/image/v2/D5603AQGWRIs220UXNg/profile-displayphoto-shrink_800_800/B56ZaRgXZzG4Ag-/0/1746197903857?e=1767830400&v=beta&t=RjKcfbKxQtr3FDnGj9GtGN7nNyOng39NeW6b041uxno" />
+            <AvatarImage src={process.env.NEXT_PUBLIC_PROFILE_PICTURE} />
             <AvatarFallback>SM</AvatarFallback>
           </Avatar>
         </ItemMedia>
         <ItemContent>
           <ItemTitle className="text-3xl font-bold">Simão Marques</ItemTitle>
           <ItemDescription className="text-lg font-medium">
-            Full Stack Developer @{" "}
+            Senior Full Stack Developer @{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -33,16 +33,9 @@ export default function BioSection() {
             </a>
           </ItemDescription>
           <p className="leading-7 font-medium">
-            I'm a full stack developer with a passion for building web
-            applications. I'm currently working as a software engineer at{" "}
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google
-            </a>
-            .
+            I'm a Full Stack Engineer who doesn't wait for problems to fix
+            themselves. With 3+ years in SaaS and CRM development, I take
+            ownership of problems from root cause to production-ready solution.
           </p>
         </ItemContent>
         <ItemActions>
